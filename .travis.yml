@@ -1,0 +1,19 @@
+language: node_js
+
+node_js: 
+  - "0.10"
+  - "0.11"
+  - "0.12"
+  - "4.2"
+  - "5.1"
+
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install
+  # we will use gulp file to load web server too.
+  #- npm start > /dev/null &
+  #- sleep 1 # let the server start...
+
+script: 
+  - npm test
