@@ -7,9 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "gulp": "gulp",
+    "test": "gulp",
     "wdio-test" : "gulp test:webdriver:jasmine"
   },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/leocornus/webdriverio.samples.git"
