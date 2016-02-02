@@ -1,0 +1,41 @@
+{
+  "name": "webdriverio.samples",
+  "version": "0.0.1",
+  "description": "functional testing in webdriver.io",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "wdio-test" : "gulp test:webdriver:jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leocornus/webdriverio.samples.git"
+  },
+  "keywords": [
+    "sandbox",
+    "playground"
+  ],
+  "author": "Sean Chen <sean.chen@leocorn.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/leocornus/webdriverio.samples/issues"
+  },
+  "homepage": "https://github.com/leocornus/webdriverio.samples",
+  "devDependencies": {
+    "bower": "^1.5.3",
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.1.0",
+    "gulp-util": "^3.0.5",
+    "gulp-webdriver": "^1.0.2",
+    "jasmine": "^2.2.1",
+    "jasmine-core": "^2.3.0",
+    "jasmine-jquery": "^2.1.1",
+    "jasmine-spec-reporter": "^2.4.0",
+    "selenium-standalone": "^4.8.0"
+  },
+  "dependencies": {
+  }
+}
