@@ -37,7 +37,7 @@ gulp.task('test:webdriver:jasmine', ['selenium'], function() {
  * Windows environment need some special steps...
  */
 gulp.task('wintest:webdriver:jasmine', ['selenium-skip-install'], function() {
-    return gulp.src('test/wdio.conf.jasmine.js').
+    return gulp.src('test/wdio.win.conf.jasmine.js').
     pipe(webdirverSingle({
         //logLevel: 'verbose',
         //logLevel: 'command',
