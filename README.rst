@@ -7,6 +7,16 @@ webdriverio.samples
 
 sandbox to play with webdriver.io, samples, examples, playground, etc.
 
+Quick Start
+-----------
+
+:install:
+  $ npm install
+:run test:
+  $ npm run wdio-test
+:run test on Windows:
+  $ npm run wdio-win-test
+
 .. |travis| image:: https://api.travis-ci.org/leocornus/webdriverio.samples.png
 .. _travis: https://travis-ci.org/leocornus/webdriverio.samples
 .. |npm-version| image:: https://img.shields.io/npm/v/webdriverio.samples.svg
