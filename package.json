@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "gulp",
-    "wdio-test" : "gulp test:webdriver:jasmine"
+    "wdio-test" : "gulp test:webdriver:jasmine",
+    "wdio-win-test" : "gulp wintest:webdriver:jasmine"
   },
 
   "repository": {
