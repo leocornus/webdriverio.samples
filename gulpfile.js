@@ -37,13 +37,12 @@ gulp.task('test:webdriver:jasmine', ['selenium'], function() {
  * Windows environment need some special steps...
  */
 gulp.task('wintest:webdriver:jasmine', ['selenium-skip-install'], function() {
+
     return gulp.src('test/wdio.win.conf.jasmine.js').
+
     pipe(webdirverSingle({
-        // Options: verbose, silent, command, data, result
-        // default level is silent
-        logLevel: 'silent',
-        waitforTimeout: 12345,
-        // only for testing purposes
+        // we could overwrite the options set in the config file.
+        // or add new options here.
         cucumberOpts: {
             require: 'nothing'
         },

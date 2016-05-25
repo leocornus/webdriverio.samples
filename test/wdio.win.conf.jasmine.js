@@ -20,11 +20,15 @@ exports.config = {
         browserName: 'internet explorer',
         name: 'gulp-webdriver tests'
     }],
+    // Options: verbose, silent, command, data, result
+    // default level is silent
     logLevel: 'silent',
     coloredLogs: true,
     screenshotPath: './',
+
     baseUrl: 'http://webdriverjs.christian-bromann.com',
-    waitforTimeout: 10000,
+
+    waitforTimeout: 12345,
     framework: 'jasmine', // gets overwritten in gruntfile
     jasmineNodeOpts: {
         expectationResultHandler: function(passed, assertion) {
