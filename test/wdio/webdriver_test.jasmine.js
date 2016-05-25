@@ -16,10 +16,30 @@ describe('gulp-webdriver test simple specs', function () {
     });
 
     it('checks if title contains the search query', function() {
-        return browser
-            .url('/')
-            .getTitle(function(err,title) {
-                expect(title).toBe('WebdriverJS Testpage');
-            });
+
+	// option the url.
+        browser.url('/');
+
+	// verify the page title.
+        browser.getTitle(function(err,title) {
+            expect(title).toBe('WebdriverJS Testpage');
+        });
+
+	// return to remain the chain.
+        return browser;
+    });
+
+    it('check the title again, using call(done)', function(done) {
+	
+	// option the url.
+        browser.url('/');
+
+	// verify the page title.
+        browser.getTitle(function(err,title) {
+            expect(title).toBe('WebdriverJS Testpage');
+        });
+
+	// call done to finish.
+        browser.call(done);
     });
 });
