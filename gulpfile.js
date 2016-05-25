@@ -39,8 +39,8 @@ gulp.task('test:webdriver:jasmine', ['selenium'], function() {
 gulp.task('wintest:webdriver:jasmine', ['selenium-skip-install'], function() {
     return gulp.src('test/wdio.win.conf.jasmine.js').
     pipe(webdirverSingle({
-        //logLevel: 'verbose',
-        //logLevel: 'command',
+        // Options: verbose, silent, command, data, result
+        // default level is silent
         logLevel: 'silent',
         waitforTimeout: 12345,
         // only for testing purposes
@@ -87,7 +87,9 @@ gulp.task('selenium', function (done) {
 gulp.task('selenium-skip-install', function (done) {
     selenium.start({
        spawnOptions: {
-           stdio: 'inherit'
+           // set stdio to inherit to show details logging message from
+           // selenium server.
+           //stdio: 'inherit'
        }
     }, function (err, child) {
       if (err) return done(err);
