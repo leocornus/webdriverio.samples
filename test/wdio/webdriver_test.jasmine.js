@@ -1,8 +1,8 @@
 describe('gulp-webdriver test simple specs', function () {
 
-    it('should have right options', function() {
+    it('should have right options', function(done) {
 
-        console.log(browser.options);
+        //console.log(browser.options);
 
         expect(browser.options.waitforTimeout).toBe(12345);
         expect(browser.options.coloredLogs).toBe(true);
@@ -12,34 +12,24 @@ describe('gulp-webdriver test simple specs', function () {
         expect(browser.options.cucumberOpts.require[0]).
             toBe('nothing');
 
-        return browser;
+        browser.call(done);
     });
 
-    it('checks if title contains the search query', function() {
-
-	// option the url.
-        browser.url('/');
-
-	// verify the page title.
-        browser.getTitle(function(err,title) {
-            expect(title).toBe('WebdriverJS Testpage');
-        });
-
-	// return to remain the chain.
-        return browser;
-    });
-
+    /**
+     * using the done to make sure the asynchronous operations.
+     */
     it('check the title again, using call(done)', function(done) {
 	
 	// option the url.
-        browser.url('/');
-
+        browser.url('/')
+	// wait until the page are fully loaded.
+        .pause(2000)
 	// verify the page title.
-        browser.getTitle(function(err,title) {
+        .getTitle().then(function(title) {
+            //console.log(title);
             expect(title).toBe('WebdriverJS Testpage');
-        });
-
+        })
 	// call done to finish.
-        browser.call(done);
+        .call(done);
     });
 });
