@@ -6,7 +6,8 @@ exports.config = {
     updateJob: false, // will get overwritten
 
     specs: [
-        './test/wdio/webdriver_test.jasmine.js'
+        './test/wdio/webdriver_test.jasmine.js',
+        './test/bootstrap/*.js'
     ],
     exclude: [
         // 'path/to/excluded/files'
@@ -14,11 +15,11 @@ exports.config = {
 
     capabilities: [{
         browserName: 'firefox',
-        name: 'gulp-webdriver tests'
+        name: 'Firefox'
     },
     {
         browserName: 'internet explorer',
-        name: 'gulp-webdriver tests'
+        name: 'Iternet Explorer 11'
     }],
     // Options: verbose, silent, command, data, result
     // default level is silent
