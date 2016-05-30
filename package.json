@@ -1,6 +1,6 @@
 {
   "name": "webdriverio.samples",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "functional testing in webdriver.io",
   "main": "index.js",
   "directories": {
@@ -8,10 +8,9 @@
   },
   "scripts": {
     "test": "gulp",
-    "wdio-test" : "gulp test:webdriver:jasmine",
-    "wdio-win-test" : "gulp wintest:webdriver:jasmine"
+    "wdio-test": "gulp test:webdriver:jasmine",
+    "wdio-win-test": "gulp wintest:webdriver:jasmine"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/leocornus/webdriverio.samples.git"
@@ -38,6 +37,5 @@
     "jasmine-spec-reporter": "^2.4.0",
     "selenium-standalone": "^4.8.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
