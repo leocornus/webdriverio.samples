@@ -44,6 +44,14 @@ describe('Check typography specs for Bootstrap framework', function() {
                 }
             }
         })
+        .getCssProperty('h1', 'font-weight').then(function(fontWeight) {
+            expect(fontWeight).toEqual(jasmine.any(Array));
+            //console.log(fontWeight);
+            for(i = 0; i < fontWeight.length; i ++) {
+                expect(fontWeight[i].value).toBe(500);
+            }
+        })
         .call(done);
     });
 });
+
