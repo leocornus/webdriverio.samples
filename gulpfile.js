@@ -1,11 +1,11 @@
-var gulp = require('gulp');
+var gulp = require('gulp-help')(require('gulp'));
 // jamine runner.
 var jasmine = require('gulp-jasmine');
 
 // the default task.
-gulp.task('default', ['test:webdriver:jasmine']);
+gulp.task('default', ['help']);
 
-gulp.task('hello', function() {
+gulp.task('hello', 'Hello Gulp World!', function() {
   // place code for your default task here
   console.log('Hello Gulp World!');
 });
@@ -14,7 +14,9 @@ gulp.task('hello', function() {
 var webdirverSingle = require('gulp-webdriver');
 
 // using jasmine as the test framework.
-gulp.task('test:webdriver:jasmine', ['selenium'], function() {
+gulp.task('test:webdriver:jasmine', 
+          'Execute all test cases',
+          ['selenium'], function() {
     return gulp.src('test/wdio.conf.jasmine.js').
     pipe(webdirverSingle({
         //logLevel: 'verbose',
@@ -36,7 +38,9 @@ gulp.task('test:webdriver:jasmine', ['selenium'], function() {
  * create separate task for testing on windows.
  * Windows environment need some special steps...
  */
-gulp.task('wintest:webdriver:jasmine', ['selenium-skip-install'], function() {
+gulp.task('wintest:webdriver:jasmine', 
+          'Execute all test cases on Windows',
+          ['selenium-skip-install'], function() {
 
     return gulp.src('test/wdio.win.conf.jasmine.js').
 
@@ -55,7 +59,8 @@ gulp.task('wintest:webdriver:jasmine', ['selenium-skip-install'], function() {
 
 var selenium = require('selenium-standalone');
 
-gulp.task('selenium', function (done) {
+gulp.task('selenium', 'Install and start selenium server', 
+          function (done) {
     selenium.install({
         logger: function (message) { 
             console.log(message);
@@ -83,7 +88,8 @@ gulp.task('selenium', function (done) {
  * User need manually download everything and put to the proper folder.
  * This task will load selenium once the manual steps are done.
  */
-gulp.task('selenium-skip-install', function (done) {
+gulp.task('selenium-skip-install', 'Start selenium server',
+          function (done) {
     selenium.start({
        spawnOptions: {
            // set stdio to inherit to show details logging message from

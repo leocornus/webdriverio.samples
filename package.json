@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "gulp",
+    "gulp": "gulp",
     "wdio-test": "gulp test:webdriver:jasmine",
     "wdio-win-test": "gulp wintest:webdriver:jasmine"
   },
@@ -28,6 +29,7 @@
   "devDependencies": {
     "bower": "^1.5.3",
     "gulp": "^3.9.0",
+    "gulp-help": "^1.6.1",
     "gulp-jasmine": "^2.1.0",
     "gulp-util": "^3.0.5",
     "gulp-webdriver": "^1.0.2",
