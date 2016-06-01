@@ -16,7 +16,8 @@ describe('Check typography specs for Bootstrap framework', function() {
     /**
      * check the heading size the width.
      */
-    it('Bootstrap heading specs', function(done) {
+    it('Bootstrap h1 font: size 36px, weight 500, color #333333', 
+       function(done) {
 
         browser.pause(2000)
         .isExisting('h1').then(function(hasTag) {
@@ -36,6 +37,7 @@ describe('Check typography specs for Bootstrap framework', function() {
             expect(fontSize).toEqual(jasmine.any(Array));
             //console.log(fontSize);
             for(i=0; i < fontSize.length; i++) {
+                expect(fontSize[i].property).toBe('font-size');
                 var theSize = fontSize[i].value;
                 if(i == 0) {
                     expect(theSize).toBe('60px');
@@ -48,7 +50,22 @@ describe('Check typography specs for Bootstrap framework', function() {
             expect(fontWeight).toEqual(jasmine.any(Array));
             //console.log(fontWeight);
             for(i = 0; i < fontWeight.length; i ++) {
+                expect(fontWeight[i].property).toBe('font-weight');
                 expect(fontWeight[i].value).toBe(500);
+            }
+        })
+        .getCssProperty('h1', 'color').then(function(colors) {
+            expect(colors).toEqual(jasmine.any(Array));
+            //console.log(colors);
+            for(i = 0; i < colors.length; i ++) {
+                //console.log(colors[i]);
+                expect(colors[i].property).toBe('color');
+                var theColor = colors[i].parsed.hex;
+                if(i == 0) {
+                    expect(theColor).toBe('#ffffff');
+                } else {
+                    expect(theColor).toBe('#333333');
+                }
             }
         })
         .call(done);
