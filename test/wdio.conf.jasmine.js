@@ -7,7 +7,9 @@ exports.config = {
 
     specs: [
         './test/wdio/webdriver_test.jasmine.js',
-        './test/bootstrap/*.js'
+        //'./test/bootstrap/*.js'
+        //'./test/bootstrap/register-form-specs.js'
+        //'./test/bootstrap/register-form-async-specs.js'
     ],
     exclude: [
         // 'path/to/excluded/files'
