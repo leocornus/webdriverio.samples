@@ -28,9 +28,11 @@
   "homepage": "https://github.com/leocornus/webdriverio.samples",
   "devDependencies": {
     "bower": "^1.5.3",
+    "express": "^4.15.3",
     "gulp": "^3.9.0",
     "gulp-help": "^1.6.1",
     "gulp-jasmine": "^2.1.0",
+    "gulp-live-server": "0.0.30",
     "gulp-util": "^3.0.5",
     "gulp-webdriver": "^2.0.3",
     "jasmine": "^2.2.1",
@@ -38,6 +40,7 @@
     "jasmine-jquery": "^2.1.1",
     "jasmine-spec-reporter": "^2.4.0",
     "selenium-standalone": "^4.8.0",
+    "serve-index": "^1.9.0",
     "wdio-jasmine-framework": "^0.2.19",
     "webdriverio": "^4.6.1"
   },
