@@ -9,7 +9,7 @@ describe('gulp-webdriver test simple specs', function () {
         expect(browser.options.updateJob).toBe(false);
 	// default log level is silent.
         //expect(browser.options.logLevel).toBe('silent');
-        expect(browser.options.cucumberOpts.require[0]).
+        expect(browser.options.cucumberOpts.require).
             toBe('nothing');
 
         browser.call(done);
@@ -23,13 +23,12 @@ describe('gulp-webdriver test simple specs', function () {
 	// option the url.
         browser.url('/')
 	// wait until the page are fully loaded.
-        .pause(2000)
+        .pause(2000);
 	// verify the page title.
-        .getTitle().then(function(title) {
-            //console.log(title);
-            expect(title).toBe('WebdriverJS Testpage');
-        })
+        var title = browser.getTitle();
+        //console.log(title);
+        expect(title).toBe('WebdriverJS Testpage');
 	// call done to finish.
-        .call(done);
+        //.call(done);
     });
 });

@@ -6,7 +6,8 @@ exports.config = {
     updateJob: false, // will get overwritten
 
     specs: [
-        './test/wdio/webdriver_test.jasmine.js',
+        //'./test/wdio/webdriver_test.jasmine.js',
+        './test/wdio/register-form-specs.js'
         //'./test/bootstrap/*.js'
         //'./test/bootstrap/register-form-specs.js'
         //'./test/bootstrap/register-form-async-specs.js'
@@ -16,8 +17,8 @@ exports.config = {
     ],
 
     capabilities: [{
-        browserName: 'firefox',
-        //browserName: 'chrome',
+        //browserName: 'firefox',
+        browserName: 'chrome',
         name: 'gulp-webdriver tests'
     }],
     logLevel: 'silent',
