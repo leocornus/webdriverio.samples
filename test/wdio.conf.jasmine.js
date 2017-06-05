@@ -16,11 +16,17 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
 
-    capabilities: [{
+    capabilities: [
+      {
         browserName: 'firefox',
         //browserName: 'chrome',
-        name: 'gulp-webdriver tests'
-    }],
+        name: 'gulp-webdriver firefox'
+      },
+      {
+        browserName: 'chrome',
+        name: 'gulp-webdriver chrome'
+      }
+    ],
     logLevel: 'silent',
     coloredLogs: true,
     screenshotPath: './',
