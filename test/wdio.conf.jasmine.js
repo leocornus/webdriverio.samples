@@ -17,8 +17,8 @@ exports.config = {
     ],
 
     capabilities: [{
-        //browserName: 'firefox',
-        browserName: 'chrome',
+        browserName: 'firefox',
+        //browserName: 'chrome',
         name: 'gulp-webdriver tests'
     }],
     logLevel: 'silent',
