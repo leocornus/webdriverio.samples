@@ -1,8 +1,5 @@
 language: node_js
 
-jdk:
-  - oraclejdk8
-
 env:
   - CXX=g++-4.8
 
@@ -12,6 +9,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+      - oracle-java8-set-default
   chrome: stable
 
 node_js: 
