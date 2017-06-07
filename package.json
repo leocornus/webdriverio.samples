@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "gulp",
+    "test": "gulp test:webdriver:jasmine",
     "gulp": "gulp",
     "wdio-test": "gulp test:webdriver:jasmine",
     "wdio-win-test": "gulp wintest:webdriver:jasmine"
