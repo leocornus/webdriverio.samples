@@ -9,7 +9,9 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+      - oracle-java8-set-default
   chrome: stable
+  firefox: latest
 
 node_js: 
   #- "0.11"

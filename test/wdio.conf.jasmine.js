@@ -21,11 +21,12 @@ exports.config = {
         browserName: 'firefox',
         //browserName: 'chrome',
         name: 'gulp-webdriver firefox'
-      },
-      {
-        browserName: 'chrome',
-        name: 'gulp-webdriver chrome'
       }
+        //,
+      //{
+      //  browserName: 'chrome',
+      //  name: 'gulp-webdriver chrome'
+      //}
     ],
     logLevel: 'silent',
     coloredLogs: true,
