@@ -5,6 +5,7 @@
 #for ((;;))
 for i in {1..50}
 do
+  echo "============== $i ==============="
   npm run wdio-test
   # sleep for 30 seconds
   sleep 3 
